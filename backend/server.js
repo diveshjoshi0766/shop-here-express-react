@@ -17,9 +17,6 @@ mongoose.connect(process.env.MONGODB_URL , {
     useCreateIndex: true,
 });
 
-app.get('/', (req, res) => {
-    console.log('hello')
-})
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.get('/', (req, res) => {
